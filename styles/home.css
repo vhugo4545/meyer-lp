@@ -1,0 +1,135 @@
+#home {
+    display: flex;
+    min-height: calc(100vh - 91px);
+    position: relative;
+
+    /* Plano de fundo */
+    background-image: url('./src/images/hero.png'); /* Verifique o caminho */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+}
+
+#content {
+    /* Plano de fundo */
+    background-image: url('./src/images/hero.png'); /* Verifique o caminho */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+}
+
+#cta {
+    width: 75%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 2%;
+    padding: 5%;
+    z-index: 0;
+
+    /* Estilo Glassmorphism */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco com baixa opacidade */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari */
+    border-radius: 15px; /* Borda arredondada */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda com transparência */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#cta .title {
+    font-size: 3rem;
+    line-height: 1.1;
+    color:rgb(92, 92, 92);
+}
+
+#cta .title span {
+    color: var(--color-primary-6);
+}
+
+#cta .description {
+    font-size: 1.2rem;
+    color: black;
+}
+
+#cta_buttons {
+    display: flex;
+    gap: 24px;
+}
+
+#cta_buttons a {
+    text-decoration: none;
+    color: var(--color-neutral-1);
+}
+
+#phone_button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 8px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+#phone_button button {
+    box-shadow: none;
+}
+
+#banner {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 70%;
+    z-index: 1;
+}
+
+#banner img {
+    height: 100%;
+    width: fit-content;
+}
+
+.shape {
+    background-color: var(--color-primary-2);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40% 30% 0% 20%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1170px) {
+    #home {
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    #banner,
+    #banner img,
+    #home .shape {
+        display: none;
+    }
+
+    #cta {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #phone_button button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) { /* Ajuste o valor para o breakpoint desejado */
+    #cta_buttons {
+        flex-direction: column; /* Alinha os botões verticalmente */
+        align-items: center; /* Centraliza os botões */
+        gap: 16px; /* Ajuste o espaçamento entre os botões, se necessário */
+    }
+}
