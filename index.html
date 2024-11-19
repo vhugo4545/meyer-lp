@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <title>Landing Page</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav id="navbar">
+            <i class="" id="nav_logo">Meyer Recepções </i>
+            <ul id="nav_list">
+                <li class="nav-item active"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#menu">Serviços</a></li>
+                <li class="nav-item"><a href="#testimonials">Depoimentos</a></li>
+            </ul>
+           
+            <button id="mobile_btn"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+
+        <!-- Menu Mobile -->
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#menu">Serviços</a></li>
+                <li class="nav-item"><a href="#testimonials">Depoimentos</a></li>
+            </ul>
+          
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="content">
+        <!-- Home Section -->
+        <section id="home">
+            
+            <div id="cta">
+                <h1 class="title">Conheça o melhor da pampulha!</h1>
+                <p class="description">Seu evento com qualidade e sofisticação: oferecemos serviços exclusivos, como buffet completo, decoração, e infraestrutura de ponta para garantir a melhor experiência do mercado.</p>
+                <div id="cta_buttons">
+                    <a href="https://api.whatsapp.com/send?phone=553184055883&text=Vi%20seu%20perfil%20no%20google%20(%20Meyer%20Recp%C3%A7%C3%B5es),%20quero%20mais%20informa%C3%A7%C3%B5es" class="btn-default">Entrar em contato</a>
+                    <a href="https://api.whatsapp.com/send?phone=553184055883&text=Vi%20seu%20perfil%20no%20google%20(%20Meyer%20Recp%C3%A7%C3%B5es),%20quero%20mais%20informa%C3%A7%C3%B5es" id="phone_button">
+                        <button class="btn-default"><i class="fa-solid fa-phone"></i></button>
+                         (31) 98405-5883
+                    </a>
+                </div>
+                <div class="social-media-buttons">
+                    <a href="https://api.whatsapp.com/send?phone=553184055883&text=Vi%20seu%20perfil%20no%20google%20(%20Meyer%20Recp%C3%A7%C3%B5es),%20quero%20mais%20informa%C3%A7%C3%B5es"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/meyer.eventos?igsh=MXJmdm5scmsxM3lqYQ== "><i class="fa-brands fa-instagram"></i></a>
+                 
+                </div>
+            </div>
+            <div id="banner">
+               
+            </div>
+        </section>
+        <style>
+            #home {
+                height: 50%;
+    /* Definindo o plano de fundo */
+    background-image: url('src/images/hero.png'); /* Caminho para a imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    min-height: 50vh; /* Garante que a seção ocupe toda a altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Ajuste da cor do texto para contraste */
+}
+
+        </style>
+
+<section id="gallery" style="position: relative; padding: 20px; overflow: hidden;">
+    <!-- Título e subtítulo da galeria -->
+    <h2 class="section-title" style="text-align: center; font-size: 2rem; margin-bottom: 10px;">Conheça nosso espaço</h2>
+    <h3 class="section-subtitle" style="text-align: center; font-size: 1.2rem; color: #555; margin-bottom: 20px;">
+        Celebre seu casamento no espaço mais<br> encantador da orla da Pampulha.
+    </h3>
+
+    <!-- Botão Esquerdo -->
+    <button 
+        style="cursor: pointer; position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background-color: #fff; border: none; padding: 10px; font-size: 20px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 10; display: none;" 
+        class="arrow-button left"
+        onclick="const container = document.querySelector('.gallery-container'); container.scrollBy({ left: -container.clientWidth / 2, behavior: 'smooth' });">
+        &#9664;
+    </button>
+
+    <!-- Botão Direito -->
+    <button 
+        style="cursor: pointer; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background-color: #fff; border: none; padding: 10px; font-size: 20px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 10; display: none;" 
+        class="arrow-button right"
+        onclick="const container = document.querySelector('.gallery-container'); container.scrollBy({ left: container.clientWidth / 2, behavior: 'smooth' });">
+        &#9654;
+    </button>
+
+    <!-- Container de imagens da galeria -->
+    <div class="gallery-container" 
+         style="display: flex; overflow-x: scroll; gap: 16px; scroll-behavior: smooth; padding: 10px; white-space: nowrap; position: relative;"
+         onmousedown="let startX, scrollLeft; const container = event.currentTarget; container.addEventListener('mousemove', drag); container.addEventListener('mouseup', stopDrag); container.addEventListener('mouseleave', stopDrag); startX = event.pageX - container.offsetLeft; scrollLeft = container.scrollLeft; function drag(e) { if (!startX) return; e.preventDefault(); const x = e.pageX - container.offsetLeft; const walk = x - startX; container.scrollLeft = scrollLeft - walk; } function stopDrag() { startX = null; container.removeEventListener('mousemove', drag); container.removeEventListener('mouseup', stopDrag); container.removeEventListener('mouseleave', stopDrag); }">
+        <img src="src/images/Snapinsta.app_465988713_18254459011257015_2921510924408983731_n_1080.jpg" alt="Image 0" style="border-radius: 8px; width: 200px; height: auto; object-fit: cover;">
+        <img src="src/images/Snapinsta.app_466081560_18254459002257015_2620711503482997922_n_10801.jpg" alt="Image 1" style="border-radius: 8px; width: 200px; height: auto; object-fit: cover;">
+        <img src="src/images/Snapinsta.app_465988713_18254459011257015_2921510924408983731_n_10802.jpg" alt="Image 2" style="border-radius: 8px; width: 200px; height: auto; object-fit: cover;">
+        <img src="src/images/Snapinsta.app_466081560_18254459002257015_2620711503482997922_n_10803.jpg" alt="Image 3" style="border-radius: 8px; width: 200px; height: auto; object-fit: cover;">
+        <img src="src/images/Snapinsta.app_465988713_18254459011257015_2921510924408983731_n_10804.jpg" alt="Image 4" style="border-radius: 8px; width: 200px; height: auto; object-fit: cover;">
+        <img src="src/images/Snapinsta.app_466081560_18254459002257015_2620711503482997922_n_10805.jpg" alt="Image 5" style="border-radius: 8px; width: 200px; height: auto; object-fit: cover;">
+        <img src="src/images/Snapinsta.app_465988713_18254459011257015_2921510924408983731_n_10806.jpg" alt="Image 6" style="border-radius: 8px; width: 200px; height: auto; object-fit: cover;">
+    </div>
+</section>
+
+<style>
+    .gallery-container::-webkit-scrollbar {
+        width: 8px; /* Largura da barra */
+        height: 8px; /* Largura da barra horizontal (se necessário) */
+    }
+
+    .gallery-container::-webkit-scrollbar-track {
+        background: #f1f1f100; /* Cor de fundo da barra de rolagem */
+        border-radius: 10px; /* Bordas arredondadas da pista */
+    }
+
+    .gallery-container::-webkit-scrollbar-thumb {
+        background-color: #88888800; /* Cor da parte da barra que pode ser movida */
+        border-radius: 10px; /* Bordas arredondadas do "polegar" */
+        border: 2px solid #cccccc00; /* Borda ao redor do "polegar" */
+    }
+
+    .gallery-container::-webkit-scrollbar-thumb:hover {
+        background-color: #55555500; /* Cor quando o "polegar" é hover */
+    }
+</style>
+
+
+<!-- Script para ocultar setas no mobile -->
+<script>
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+        document.querySelectorAll('.arrow-button').forEach(button => button.style.display = 'none');
+    }
+</script>
+
+
+<style>
+/* Estilos para o título e subtítulo */
+.section-title, .section-subtitle {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Estilos para a galeria */
+#gallery {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 0;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 16px;
+    overflow-x: hidden;
+    padding: 0 20px;
+    scroll-behavior: smooth;
+    width: 100%; /* Ajusta a largura do contêiner */
+}
+
+.gallery-container img {
+    min-width: calc(100vw / 6); /* Cada imagem ocupa 1/6 da largura da tela */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Botões de navegação */
+.carousel-button {
+    position: absolute;
+    top: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    margin: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 2;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+/* Degradê nas laterais */
+#gallery::before, #gallery::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#gallery::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+#gallery::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Ajustes para mobile */
+@media screen and (max-width: 768px) {
+    .gallery-container img {
+        min-width: 250px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100vw;
+}
+</style>
+<script>
+
+function scrollLeft() {
+    const container = document.querySelector('.gallery-container');
+    const scrollAmount = container.clientWidth / 2; // Rola metade da largura do contêiner
+    container.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+function scrollRight() {
+    const container = document.querySelector('.gallery-container');
+    const scrollAmount = container.clientWidth / 2; // Rola metade da largura do contêiner
+    container.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+</script>
+<br>
+
+
+        <!-- Menu Section -->
+        <style>
+            /* Estilo para a seção de menu */
+            #menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: antiquewhite;
+                padding: 20px;
+                gap: 40px;
+            }
+        
+            /* Nova div com imagem e texto */
+            .new-div {
+                display: flex;
+                flex-wrap: wrap; /* Permite quebra para linhas em dispositivos menores */
+                align-items: center;
+                justify-content: center;
+                gap: 20px; /* Espaçamento entre imagem e texto */
+                max-width: 1000px; /* Limita a largura máxima */
+                margin: 0 auto;
+            }
+        
+            .new-div img {
+                width: 100%;
+                max-width: 400px; /* Define largura máxima da imagem */
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        
+            .new-div .text {
+                flex: 1;
+                padding: 10px;
+                text-align: center; /* Alinha texto no centro em telas menores */
+            }
+        
+            .new-div .text h1 {
+                font-size: 2rem;
+                color: #333;
+                margin-bottom: 20px;
+            }
+        
+            .new-div .text p {
+                font-size: 1.2rem;
+                color: #666;
+                line-height: 1.6;
+            }
+        
+            /* Estilo para os pratos */
+            #dishes {
+                display: flex;
+                flex-wrap: wrap; /* Permite que os itens fiquem em múltiplas linhas */
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+            }
+        
+            .dish {
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 250px; /* Limita o tamanho máximo de cada prato */
+                padding: 15px;
+                text-align: center;
+               
+            }
+        
+            .dish img {
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+        
+            .dish h3 {
+                font-size: 1.2rem;
+                color: #333;
+                margin: 10px 0;
+            }
+        
+            .dish span {
+                font-size: 0.9rem;
+                color: #666;
+                display: block;
+                margin-bottom: 10px;
+            }
+        
+            .dish .dish-price button {
+                background-color: #333;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        
+            .dish .dish-price button:hover {
+                background-color: #555;
+            }
+        
+            /* Responsividade */
+            @media screen and (max-width: 768px) {
+                .new-div {
+                    flex-direction: column;
+                }
+        
+                .new-div img {
+                    max-width: 100%; /* Ocupa toda a largura disponível */
+                }
+        
+                .new-div .text {
+                    text-align: center;
+                }
+        
+                #dishes {
+                    gap: 10px; /* Reduz espaçamento entre pratos */
+                }
+        
+                .dish {
+                    max-width: 800px; /* Reduz tamanho dos pratos em telas menores */
+                }
+            }
+        </style>
+        
+        <section id="menu">
+            <!-- Nova Div -->
+            <div class="new-div">
+                <!-- Imagem -->
+                <img src="/src/images/Snapinsta.app_466081560_18254459002257015_2620711503482997922_n_1080.jpg" alt="Descrição da imagem" style="height: 300px; width: auto;">
+
+                <div class="text">
+                    <h1 class="section-title">Temos todos os serviços para seu evento!</h1>
+                    <p>Oferecemos todos os serviços para tornar seu evento único e memorável. Desde o espaço ideal, buffet de excelência, decoração personalizada, até uma equipe completa para cuidar de cada detalhe. Nossa missão é transformar sua celebração em um momento inesquecível, com total dedicação.</p>
+                   <center>
+                    <br>
+                    <a href="https://api.whatsapp.com/send?phone=553184055883&text=Vi%20seu%20perfil%20no%20google%20(%20Meyer%20Recp%C3%A7%C3%B5es),%20quero%20mais%20informa%C3%A7%C3%B5es" class="btn-default" style="color: black;" >Visitar nosso espaço</a>
+
+                   </center>
+                </div>
+                <hr id="separador">
+            </div>
+        </section>
+         
+           
+            <!-- Lista de Pratos -->
+<div id="dishes">
+    <!-- Prato 1 -->
+    <div class="dish">
+        <img src="src/images/dish-espaço.png" alt="Dish 1">
+        <h3>Salão com gerador de energia</h3>
+        <span>Nosso salão é equipado com gerador de energia próprio, garantindo um evento sem imprevistos e com total confiança.</span>
+        <div class="dish-price">
+            <a href="https://api.whatsapp.com/send?phone=553184055883&text=Vi%20seu%20perfil%20no%20google%20(%20Meyer%20Recp%C3%A7%C3%B5es),%20quero%20mais%20informa%C3%A7%C3%B5es" 
+            class="btn-default" 
+            style="display: inline-block; text-align: center; padding: 10px 20px; color: white; background-color: #2e2e2e; border: none; border-radius: 5px; text-decoration: none; cursor: pointer;">
+            Ver mais informações
+         </a>
+            <br>
+        </div>
+    </div>
+
+    <!-- Prato 2 -->
+    <div class="dish">
+        <img src="src/images/dish-buffet.png" alt="Dish 2">
+        <h3>Buffet completo com equipe</h3>
+        <span>Buffet sofisticado com opções personalizadas <br>e equipe qualificada para atender seus convidados com <br>excelência.</span>
+    
+        <div class="dish-price">
+            <a href="https://api.whatsapp.com/send?phone=553184055883&text=Vi%20seu%20perfil%20no%20google%20(%20Meyer%20Recp%C3%A7%C3%B5es),%20quero%20mais%20informa%C3%A7%C3%B5es" 
+            class="btn-default" 
+            style="display: inline-block; text-align: center; padding: 10px 20px; color: white; background-color: #2e2e2e; border: none; border-radius: 5px; text-decoration: none; cursor: pointer;">
+            Ver mais informações
+         </a>
+            <br>
+        </div>
+    </div>
+
+    <!-- Prato 3 -->
+    <div class="dish">
+        <img src="src/images/dish-decora.png" alt="Dish 3">
+        <h3>Decoração com flores naturais</h3>
+        <span>Transforme seu evento com uma decoração única usando flores naturais, sempre escolhidas com o máximo de cuidado e qualidade.</span>
+        <div class="dish-price">
+            <a href="https://api.whatsapp.com/send?phone=553184055883&text=Vi%20seu%20perfil%20no%20google%20(%20Meyer%20Recp%C3%A7%C3%B5es),%20quero%20mais%20informa%C3%A7%C3%B5es" 
+            class="btn-default" 
+            style="display: inline-block; text-align: center; padding: 10px 20px; color: white; background-color: #2e2e2e; border: none; border-radius: 5px; text-decoration: none; cursor: pointer;">
+            Ver mais informações
+         </a>
+            <br>
+        </div>
+    </div>
+
+    <!-- Prato 4 -->
+    <div class="dish">
+        <img src="src/images/dish-boate.png" alt="Dish 4">
+        <h3>Boate com Dj e Iluminação</h3>
+        <span>Oferecemos uma boate completa com DJ e iluminação profissional, criando o ambiente perfeito para a diversão </span>
+        <div class="dish-price">
+            <a href="https://api.whatsapp.com/send?phone=553184055883&text=Vi%20seu%20perfil%20no%20google%20(%20Meyer%20Recp%C3%A7%C3%B5es),%20quero%20mais%20informa%C3%A7%C3%B5es" 
+            class="btn-default" 
+            style="display: inline-block; text-align: center; padding: 10px 20px; color: white; background-color: #2e2e2e; border: none; border-radius: 5px; text-decoration: none; cursor: pointer;">
+            Ver mais informações
+         </a>
+            <br>
+        </div>
+    </div>
+</div>
+
+
+            
+        </section>
+        <br>
+        <br>
+        <div class="new-div" style="display: flex; align-items: center; gap: 20px; max-width: 1000px; margin: 0 auto; text-align: left;">
+            <!-- Texto -->
+            <div class="text" style="flex: 1;">
+             
+                <h1 class="section-title" style="font-size: 2rem; color: #333; margin-bottom: 20px;">Saiba o que nossos clientes falam da nossa empresa!</h1>
+                <p style="font-size: 1.2rem; color: #666; line-height: 1.6;">Confiamos plenamente na qualidade do nosso trabalho e na experiência que proporcionamos. Por isso, queremos que você saiba diretamente o que nossos clientes e convidados têm a dizer sobre nós. Confira os depoimentos e veja como transformamos sonhos em realidade!</p><br>
+            
+              
+            
+            </div>
+            <!-- Vídeo -->
+            <iframe 
+                width="400" 
+                height="225" 
+                src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+                title="Vídeo do YouTube" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen 
+                style="flex-shrink: 0; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            </iframe>
+        </div>
+        
+       
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <img src="src/images/chef.png" id="testimonial_chef" alt="Chef">
+            <div id="testimonials_content">
+                <h2 class="section-title">Depoimentos</h2>
+                <h3 class="section-subtitle">O que os clientes falam sobre nós</h3>
+                <div id="feedbacks">
+                    <!-- Feedback Item -->
+                    <div class="feedback">
+                        <div class="feedback-content">
+                            <p>Henrique Matos Oliveira<span>
+                                <br>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span></p>
+                            <p>"Nosso casamento foi realizado no dia 28/09/24 e só temos à agradecer! Foi um dia especial que ficará guardado em nossa memória pra sempre. Obrigado à toda equipe e parceiros que nos atenderam com muito carinho e dedicação desde o início: Laura, Luana, Tiago, Márcia, Eder, vocês foram incríveis!"</p>
+                        </div>
+                    </div>
+                    <div class="feedback">
+                         <div class="feedback-content">
+                            <p>Thais Duarte<span>
+                                <br>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span></p>
+                            <p>"Casamento dos sonhos!! Lugar incrível e equipe impecável, todos bem responsáveis e de prontidão para ajudar! Estou muito satisfeita e extremamente grata, recomendo de olhos fechados!"</p>
+                        </div>
+                    </div>
+                   
+                    <!-- Other Feedback Items (repeat structure as above) -->
+                    <!-- ... -->
+                </div>
+                <div class="dish-price">
+                    <a href="https://api.whatsapp.com/send?phone=553184055883&text=Vi%20seu%20perfil%20no%20google%20(%20Meyer%20Recp%C3%A7%C3%B5es),%20quero%20mais%20informa%C3%A7%C3%B5es" 
+                    class="btn-default" 
+                    style="display: inline-block; text-align: center; padding: 10px 20px; color: white; background-color: #2e2e2e; border: none; border-radius: 5px; text-decoration: none; cursor: pointer;">
+                    Ver mais informações
+                 </a>
+                    <br>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <img src="src/images/wave.svg" alt="Wave">
+        <div id="footer_items">
+            <span id="copyright">Meyer Recepções</span>
+            <div class="social-media-buttons">
+                <a href="https://api.whatsapp.com/send?phone=553184055883&text=Vi%20seu%20perfil%20no%20google%20(%20Meyer%20Recp%C3%A7%C3%B5es),%20quero%20mais%20informa%C3%A7%C3%B5es"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/meyer.eventos?igsh=MXJmdm5scmsxM3lqYQ== "><i class="fa-brands fa-instagram"></i></a>
+             
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        function scrollLeft() {
+            const container = document.querySelector('.gallery-container');
+            const scrollAmount = container.clientWidth / 2; // Rola metade da largura do contêiner
+            container.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    
+    </script>  
+
+    
+
+    <!-- Scripts -->
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>
